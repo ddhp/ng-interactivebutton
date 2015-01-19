@@ -12,9 +12,9 @@ Directives for different kinds of buttons
 ## Guide
 - needed files:
   -  require js files in `src/`
-  -  src/interacticebutton.html
-  -  src/\_interactivebutton.scss
-  main.scss only shows how to import scss files
+  -  `src/interacticebutton.html`
+  -  `src/\_interactivebutton.scss`
+  `main.scss` only shows how to import scss files
 
 - setup controller, see `src/ctrl.js` for example
   - behavior callbacks: functions which handle behavior,
@@ -26,7 +26,8 @@ Directives for different kinds of buttons
 - setup controller level view, depend on which button behavior
   see index.html for reference
   * default
-  ```<default-button
+  ```
+  <default-button
     name="default"
     normal-text="Normal Status"
     loading-text="&nbsp;"
@@ -36,7 +37,8 @@ Directives for different kinds of buttons
   ```
 
   * disable
-  ```<disable-button
+  ```
+  <disable-button
     name="disable"
     normal-text="Normal Status"
     loading-text="&nbsp;"
@@ -48,7 +50,8 @@ Directives for different kinds of buttons
   ```
 
   * toggle
-  ```<toggle-button
+  ```
+  <toggle-button
     name="toggle"
     normal-text="On Status"
     loading-text="&nbsp;"
