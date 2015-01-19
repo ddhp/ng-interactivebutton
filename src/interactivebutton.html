@@ -1,0 +1,19 @@
+<a class="btn btn-lg btn-block btn-primary" ng-class="{
+  'disabled':isDisable, 
+  'btn-danger': isError, 
+  'status-off':isOff, 
+  'status-loading': isLoading}">
+  <div ng-show="isNormal">
+    <i class="fa fa-star-o"></i>{{normalText}}
+  </div>
+  <div ng-show="isLoading">
+    <div class="spin-wrapper">
+      
+    </div>
+    {{loadingText}}
+    &nbsp;
+  </div>
+  <div ng-show="isDisable">{{disableText}}</div>
+  <div ng-show="isOff && !isLoading">{{offText}}</div>
+  <div ng-show="isError">{{errorText}}</div>
+</a>

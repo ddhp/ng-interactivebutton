@@ -1,0 +1,15 @@
+$btn-off-color: white;
+$btn-off-bg: $gray-light;
+$btn-off-border: darken($gray-light, 5%);
+
+.spin-wrapper {
+  position: relative;
+}
+
+.status-off {
+  @include button-variant($btn-off-color, $btn-off-bg, $btn-off-border);
+}
+
+.status-loading {
+  pointer-events: none;
+}

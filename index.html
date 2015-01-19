@@ -1,0 +1,78 @@
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+    <title>Angular Interactive Button Directive</title>
+
+    <!-- bower:css -->
+    <!-- endbower -->
+    <link rel="stylesheet" href="main.css" />
+
+    <!-- bower:js -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/affix.js"></script>
+    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/alert.js"></script>
+    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/button.js"></script>
+    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/carousel.js"></script>
+    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/collapse.js"></script>
+    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/dropdown.js"></script>
+    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/tab.js"></script>
+    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/transition.js"></script>
+    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/scrollspy.js"></script>
+    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/modal.js"></script>
+    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/tooltip.js"></script>
+    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/popover.js"></script>
+    <!-- endbower -->
+
+    <script src="lib/spin.js"></script>
+    <script src="src/ctrl.js"></script>
+    <script src="src/defaultbutton.js"></script>
+    <script src="src/disablebutton.js"></script>
+    <script src="src/togglebutton.js"></script>
+    
+  </head>
+
+  <body ng-app="myapp">
+
+  <div class="container" ng-controller="MyCtrl">
+
+    <h3>Default</h3>
+    <p>Default behavior, do the same behavior with every click</p>
+    <default-button
+      name="default"
+      normal-text="Normal Status"
+      loading-text="&nbsp;"
+      error-text="Error Status"
+      on-click="onDefaultClick(name)" 
+    ></default-button>
+
+    <h3>Disable</h3>
+    <p>Button will be disabled after click</p>
+    <disable-button
+      name="disable"
+      normal-text="Normal Status"
+      loading-text="&nbsp;"
+      disable-text="Disable Status"
+      error-text="Error Status"
+      is-disable=false
+      on-click="onDisableClick(name, isDisable)" 
+    ></disable-button>
+
+    <h3>Toggle</h3>
+    <p>Button will toggle after click</p>
+    <toggle-button
+      name="toggle"
+      normal-text="On Status"
+      loading-text="&nbsp;"
+      off-text="Off Status"
+      error-text="Error Status"
+      is-off=false
+      on-click="onToggleClick(name, isOn)" 
+    ></toggle-button>
+
+  </div>
+    
+  </body>
+   
+</html>
