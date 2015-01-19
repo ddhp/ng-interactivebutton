@@ -81,8 +81,8 @@ angular.module('myapp')
          * go back to normal status
          *
          */
-        $scope.$on('FAILED', function (e) {
-          if (!_verifyName(scope, name)) return
+        $scope.$on('FAILED', function (e, name, err) {
+          if (!_verifyName($scope, name)) return
 
           $scope.isBlocking = false;
           $scope.isLoading = false;
