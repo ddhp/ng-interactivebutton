@@ -1,46 +1,5 @@
 'use strict';
 
-/**
- * @ngdoc directive
- * @name myapp.directive:interactiveButton
- * @description
- * # interactiveButton
- *
- * needed files:
- *  - views/interacticebutton.html
- *  - styles/_interactivebutton.scss
- *
- *
- * @concept
- *  business logic still handled in controller
- *  this directive only dispose 
- *  user interactive event and controller callback event
- *
- * @preparation
- *  - setup controller
- *    - isDisable: disable status
- *    - behavior callbacks: functions which handle behavior,
- *      assign them at view, functions should fire these events:
- *        - LOADING
- *        - DONE
- *        - FAILED
- *  
- *  - setup controller level view
- *    - give below parameters at view file, e.g
- *      <interactive-button
- *      normal-text="normal status"
- *      loading-text="loading status"
- *      disable-text="disable status"
- *      error-text="error status"
- *      // toggle status instead of same behavior
- *      is-disable=false
- *      is-toggle=true 
- *      is-on=true
- *      // onclick callback in controller
- *      on-click="onClickCallback" 
- *      ></interactive-button>
- */
-
 angular.module('myapp')
   .directive('toggleButton', function () {
     var _type,
